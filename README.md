@@ -1,16 +1,77 @@
-# React + Vite
+# Email Signature Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, React-based email signature generator that allows users to create professional, consistent email signatures with ease. Built with Vite and styled for a premium, clean aesthetic.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Real-time Preview**: See your signature update instantly as you type.
+- **Dual Preview Modes**:
+  - **Signature Only**: Focus on the signature details alone.
+  - **Demo Email**: Visualize how the signature looks in a realistic email context (To, Subject, Body).
+- **Theme Support**: Toggle between Light and Dark modes to ensure your signature looks great in any environment.
+- **Customizable Fields**:
+  - Name, Job Title, Company
+  - Social Links (Twitter/X, Website)
+  - Logo URL (conditionally rendered)
+- **One-Click Copy**: Easily copy the generated HTML code to your clipboard.
+- **Data Persistence**: Your changes are automatically saved to `localStorage` so you never lose your work.
+- **Helpful FAQs**: Built-in guide for importing signatures into Gmail, Apple Mail, and Outlook.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: [React](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: CSS Modules / Vanilla CSS with CSS Variables
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Fonts**: Inter & Outfit (via Google Fonts)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   cd email-signature
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser:**
+   Navigate to `http://localhost:5173/` to view the application.
+
+## Usage
+
+1. **Fill in your details**: Enter your name, title, company, and links in the form.
+2. **Add a Logo**: Paste a direct public URL to your profile picture or company logo.
+3. **Check the Preview**: Switch between "Signature Only" and "Demo Email" to verify the look.
+4. **Test Dark Mode**: use the theme toggle to see how it appears in dark mode email clients.
+5. **Copy HTML**: Click "Copy HTML" to get the raw HTML code.
+6. **Import**: Follow the "FAQs" guide to add it to your preferred email client.
+
+## Structure
+
+- `src/App.jsx`: Main application logic and state management.
+- `src/components/`: Reusable UI components.
+  - `SignaturePreview.jsx`: Renders the visual signature and demo email.
+  - `SignatureForm.jsx`: Input fields for user data.
+  - `ActionButtons.jsx`: Copy and Help buttons.
+  - `HelpModal.jsx`: Instructional modal.
+- `src/index.css`: Global styles and theme variables.
+
+## License
+
+This project is licensed under the MIT License.
