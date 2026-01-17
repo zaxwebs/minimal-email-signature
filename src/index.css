@@ -101,6 +101,7 @@ input {
 
 .app-header h2 {
   font-size: 1.8rem;
+  line-height: 1.2;
   font-weight: 700;
   margin-bottom: 8px;
   letter-spacing: -0.04em;
@@ -130,6 +131,21 @@ input {
 @media (max-width: 600px) {
   .input-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Mobile adjustments for header controls */
+  .theme-label {
+    display: none;
+  }
+
+  .preview-mode-btn {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .preview-controls {
+    gap: 4px;
+    justify-content: space-between;
   }
 }
 

@@ -12,7 +12,7 @@ function ThemeToggle({ theme, onToggle }) {
                 style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '8px 12px' }}
             >
                 {isDark ? <Moon size={14} /> : <Sun size={14} />}
-                {isDark ? 'Dark' : 'Light'}
+                <span className="theme-label">{isDark ? 'Dark' : 'Light'}</span>
             </button>
         </div>
     )
